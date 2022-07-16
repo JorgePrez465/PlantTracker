@@ -6,7 +6,7 @@ from PyQt5.QtGui import *
 import sys
 
 
-class Window(QMainWindow):
+class Login(QMainWindow):
     def __init__(self):
         super().__init__()
         # Open the style sheet file and read it
@@ -20,7 +20,7 @@ class Window(QMainWindow):
         self.setGeometry(200, 200, 414, 896)
         self.initUI()
 
-    def initUI(self):
+    def initLoginUI(self):
         # Login inputs
         self.username = QLineEdit(self)
         self.username.move(62, 331)
@@ -37,7 +37,7 @@ class Window(QMainWindow):
         self.show()
 
 
-App = QApplication(sys.argv)
-window = Window()
-window.show()
-sys.exit(App.exec())
+# App = QApplication(sys.argv)
+# window = Window()
+# window.show()
+# sys.exit(App.exec())

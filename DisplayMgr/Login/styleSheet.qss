@@ -22,3 +22,9 @@ QPushButton:pressed
     background-color: #98E9C7;
     border-style: inset;
 }
+
+QLabel
+{
+    background-color: #98E9C7;
+
+}
