@@ -9,43 +9,35 @@ import sys
 class Window(QMainWindow):
     def __init__(self):
         super().__init__()
-
         # Open the style sheet file and read it
-        with open("styleSheet.qss", 'r') as f:
-            style = f.read()
+        stylesheet = open("styleSheet.qss", 'r')
+        style = stylesheet.read()
         # Set the current style sheet
         self.setStyleSheet(style)
-
         # set the title
-        self.setWindowTitle("Color")
-
+        self.setWindowTitle("PlantTracker")
         # setting the geometry of window
         self.setGeometry(200, 200, 414, 896)
+        self.initUI()
 
+    def initUI(self):
         # Login inputs
         self.username = QLineEdit(self)
         self.username.move(62, 331)
         self.username.resize(289, 36)
-        self.username.setStyleSheet("border: 1px solid black;")
 
         self.password = QLineEdit(self)
         self.password.move(62, 389)
         self.password.resize(289, 36)
-        self.password.setStyleSheet("border: 1px solid black;")
 
-        self.button = QPushButton('', self)
-        self.button.setToolTip('This is an example button')
+        self.button = QPushButton("login", self)
         self.button.resize(142, 36)
         self.button.move(136, 461)
-        self.button.setStyleSheet("border: 1px solid black;")
-
         # show all the widgets
         self.show()
 
 
-# create pyqt5 app
 App = QApplication(sys.argv)
-# create the instance of our Window
 window = Window()
-# start the app
+window.show()
 sys.exit(App.exec())

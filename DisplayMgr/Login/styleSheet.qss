@@ -1,5 +1,24 @@
-QMainWindow {
+QMainWindow
+{
     background-color: "#E9FFFF";
     color: "#eee"
 }
 
+QLineEdit
+ {
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+QPushButton
+{
+    background-color: #ABF8D8;
+    border-radius: 15px;
+    font: bold 12px;
+    padding: 6px;
+}
+
+QPushButton:pressed
+{
+    background-color: #98E9C7;
+    border-style: inset;
+}
