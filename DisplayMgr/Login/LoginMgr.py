@@ -37,7 +37,7 @@ class Login(QMainWindow):
         self.show()
 
 
-# App = QApplication(sys.argv)
-# window = Window()
-# window.show()
-# sys.exit(App.exec())
+App = QApplication(sys.argv)
+view = Login()
+view.show()
+sys.exit(App.exec())
