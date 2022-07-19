@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import *
 
+class DisplayMgr:
 
-class DisplayMgr(QMainWindow):
-    pass
+    def __init__(self):
+        pass

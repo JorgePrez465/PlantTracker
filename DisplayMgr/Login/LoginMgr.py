@@ -18,7 +18,7 @@ class Login(QMainWindow):
         self.setWindowTitle("PlantTracker")
         # setting the geometry of window
         self.setGeometry(200, 200, 414, 896)
-        self.initUI()
+        self.initLoginUI()
 
     def initLoginUI(self):
         # Login inputs

@@ -1,7 +1,7 @@
 QMainWindow
 {
     background-color: "#E9FFFF";
-    color: "#eee"
+    
 }
 
 QLineEdit
