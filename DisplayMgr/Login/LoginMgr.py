@@ -11,4 +11,5 @@ engine = QQmlApplicationEngine()
 engine.quit.connect(app.quit)
 engine.load('loginView.qml')
 
-sys.exit(app.exec())
+sys.exit(app.exec_())
+
