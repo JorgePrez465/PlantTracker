@@ -1,4 +1,4 @@
-# Create different windows
+# Login window
 # June 26, 2022
 import sys
 

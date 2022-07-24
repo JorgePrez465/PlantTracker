@@ -1,21 +1,15 @@
-# Create different windows
+# Home winddow
 # June 26, 2022
-from PyQt5.QtWidgets import *
-from PyQt5 import QtCore
-from PyQt5.QtGui import *
-from PyQt5.QtCore import Qt, QRectF
 import sys
 
+from PyQt5.QtGui import QGuiApplication
+from PyQt5.QtQml import QQmlApplicationEngine
 
-class Home(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.initHomeUI()
+app = QGuiApplication(sys.argv)
 
-    def initHomeUI(self):
-        pass
+engine = QQmlApplicationEngine()
+engine.quit.connect(app.quit)
+engine.load('homeView.qml')
 
-# App = QApplication(sys.argv)
-# view = Home()
-# view.show()
-# sys.exit(App.exec())
+sys.exit(app.exec_())
+
