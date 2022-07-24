@@ -71,16 +71,18 @@ ApplicationWindow {
             height: 85
             radius: 25
             text: "Login"
-            checkable: true
+            font.italic: false
+            font.bold: true
             layer.format: ShaderEffectSource.RGBA
-            highlighted: false
+            highlighted: true
             font.pointSize: 20
-            background: Rectangle {
-                    color: "#97D2FF"
-                    radius: 25
-                    height: 75
-                    width: 338
-            }
+           /* Rectangle {
+                color: "#97D2FF"
+                radius: 25
+                width: 338
+                height: 85
+            } */
+            
         }
 
         Text {
@@ -127,5 +129,14 @@ ApplicationWindow {
             }
         }
 
+    }
+    Rectangle {
+        id: dotLogin
+        x: 111
+        y: 341
+        width: 10
+        height: 10
+        color: "#97d2ff"
+        radius: 167.5
     }
 }
