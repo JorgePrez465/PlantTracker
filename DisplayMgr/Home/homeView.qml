@@ -27,9 +27,21 @@ ApplicationWindow {
             width: 18
             height: 18
             source: "button_menu.png"
-
-            MouseArea {
-
+            }
+        MouseArea {
+            id: area
+            anchors.fill: parent;
+            hoverEnabled: true;
+            acceptedButtons: Qt.NoButton;
+            cursorShape: Qt.IBeamCursor;
+            onClicked: {
+                console.log("Clicked");
+            }
+            onEntered: {
+                opacity = 1.0;
+            }
+            onExited: {
+                opacity = 0.7;
             }
         }
     }
@@ -69,9 +81,9 @@ ApplicationWindow {
 
             TextInput {
                 id: searchInput
-                x: 20
-                y: 100
-                width: 340
+                x: 0
+                y: 0
+                width: 332
                 height: 52
                 text: qsTr("search")
                 font.pixelSize: 20
@@ -93,58 +105,6 @@ ApplicationWindow {
             y: 0
             width: 390
             height: 547
-            /*
-            GridView {
-                id: gridView
-                x: 0
-                y: 204
-                width: 140
-                height: 140
-                model: ListModel {
-                    ListElement {
-                        name: "Grey"
-                        colorCode: "grey"
-                    }
-
-                    ListElement {
-                        name: "Red"
-                        colorCode: "red"
-                    }
-
-                    ListElement {
-                        name: "Blue"
-                        colorCode: "blue"
-                    }
-
-                    ListElement {
-                        name: "Green"
-                        colorCode: "green"
-                    }
-                }
-                cellHeight: 70
-                cellWidth: 70
-                delegate: Item {
-                    x: 5
-                    height: 50
-                    Column {
-                        Rectangle {
-                            width: 155
-                            height: 188
-                            color: colorCode
-                            anchors.horizontalCenter: parent.horizontalCenter
-                        }
-
-                        Text {
-                            x: 5
-                            y: 100
-                            text: name
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            font.bold: true
-                        }
-                        spacing: 5
-                    }
-                }
-            } */
         }
     }
 }

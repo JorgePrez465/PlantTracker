@@ -1,4 +1,4 @@
-# Home window
+# Info window
 # June 26, 2022
 import sys
 
@@ -9,7 +9,7 @@ app = QGuiApplication(sys.argv)
 
 engine = QQmlApplicationEngine()
 engine.quit.connect(app.quit)
-engine.load('homeView.qml')
+engine.load('infoView.qml')
 
 sys.exit(app.exec_())
 
